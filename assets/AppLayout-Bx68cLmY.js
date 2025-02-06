@@ -2671,16 +2671,16 @@ const He = ((bt = K.find(e => e.label === "system")) == null ? void 0 : bt.types
                 artworkId: I.string
             }, ({
                 artworkId: L
-            }) => `/artwork/${L}`).with({
+            }) => `https://pixai.art/artwork/${L}`).with({
                 firstUsername: I.string
             }, ({
                 firstUsername: L
-            }) => `/@${L}`).with({
+            }) => `https://pixai.art/@${L}`).with({
                 refType: ie.Model,
                 refId: I.string
             }, ({
                 refId: L
-            }) => `/model/${L}`).with({
+            }) => `https://pixai.art/model/${L}`).with({
                 type: m.Privilege
             }, () => `/@${i==null?void 0:i.username}/credits`).with({
                 type: m.PaymentFailed
@@ -2798,7 +2798,7 @@ const He = ((bt = K.find(e => e.label === "system")) == null ? void 0 : bt.types
             refId: s,
             refMedia: a,
             refType: r
-        } = e.item, i = r === ie.Artwork ? `/artwork/${s}` : t != null ? `/artwork/${t.id}` : r === ie.Model ? `/model/${s}` : "", o = qn(a ?? (t == null ? void 0 : t.media));
+        } = e.item, i = r === ie.Artwork ? `https://pixai.art/artwork/${s}` : t != null ? `https://pixai.art/artwork/${t.id}` : r === ie.Model ? `https://pixai.art/model/${s}` : "", o = qn(a ?? (t == null ? void 0 : t.media));
         return o ? n.jsx(E, {
             to: i,
             target: "_blank",
