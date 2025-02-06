@@ -57719,7 +57719,7 @@ async function onn(e, t, n) {
     })
 }
 const cx = Zb("pixai:swClient");
-PQ && navigator.serviceWorker.register("/sw.js").then(e => {
+PQ && navigator.serviceWorker.register("/pixai/assets/sw.js").then(e => {
     var t;
     (t = e.active) == null || t.postMessage({
         type: "client-sync",
