@@ -763,7 +763,7 @@ function Ha() {
                     name: "generation",
                     title: "common:tab.generation",
                     icon: La,
-                    link: "/generator/image",
+                    link: "//pixai",
                     onClick: () => {
                         J("generate_source")
                     }
@@ -1225,7 +1225,7 @@ function qa() {
             })]
         }), n.jsx(V, {
             component: E,
-            to: "/generator/image",
+            to: "//pixai",
             className: "mx-4 bg-purple-700 dark:bg-purple-500 text-white rounded-full",
             onClick: () => {
                 w("mobile_new_btn_click")
@@ -4492,7 +4492,7 @@ function Vo() {
 function Oo() {
     const {
         data: e
-    } = U(), t = u.useMemo(() => Ts("/generator/image", e != null && e.id ? {} : {
+    } = U(), t = u.useMemo(() => Ts("//pixai", e != null && e.id ? {} : {
         showSignUpModal: 1
     }), [e == null ? void 0 : e.id]);
     return n.jsxs(Lt, {

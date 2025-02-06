@@ -115431,25 +115431,25 @@ const ile = [{
         path: "generator",
         loader: ({
             request: e
-        }) => ca(e, "/generator/image")
+        }) => ca(e, "//pixai")
     }, {
         handle: {
-            name: "generator/image",
+            name: "/pixai",
             hideMembershipBanner: !0
         },
-        path: "generator/image",
+        path: "/pixai",
         lazy: () => nt(() => import("./MultiColumnSubmitPage-CjqNbxmr.js"), __vite__mapDeps([173, 33, 46, 47, 38, 37, 22, 48, 49, 50, 51, 27, 28, 29, 30, 31, 32, 21, 34, 35, 12, 36, 14, 2, 15, 16, 39, 23, 10, 40, 17, 41, 6, 42, 52, 53, 54, 55, 56, 57, 58, 59, 19, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 174, 85, 86, 87, 153, 89, 83, 80, 90, 111, 175, 108, 176, 167, 98, 177, 45, 13, 18, 20, 24, 25, 78, 79, 81, 82, 84, 88, 91, 92, 3, 93, 94, 95, 96, 97, 99, 100, 101, 178, 179, 180, 181, 182, 132, 183, 109, 110]), import.meta.url)
     }, {
         handle: {
-            name: "generator/image/:tab",
+            name: "/pixai/:tab",
             hideMembershipBanner: !0
         },
-        path: "generator/image/:tab",
+        path: "/pixai/:tab",
         lazy: () => nt(() => import("./MultiColumnSubmitPage-CjqNbxmr.js"), __vite__mapDeps([173, 33, 46, 47, 38, 37, 22, 48, 49, 50, 51, 27, 28, 29, 30, 31, 32, 21, 34, 35, 12, 36, 14, 2, 15, 16, 39, 23, 10, 40, 17, 41, 6, 42, 52, 53, 54, 55, 56, 57, 58, 59, 19, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 174, 85, 86, 87, 153, 89, 83, 80, 90, 111, 175, 108, 176, 167, 98, 177, 45, 13, 18, 20, 24, 25, 78, 79, 81, 82, 84, 88, 91, 92, 3, 93, 94, 95, 96, 97, 99, 100, 101, 178, 179, 180, 181, 182, 132, 183, 109, 110]), import.meta.url),
         loader: ({
             request: e,
             params: t
-        }) => t.tab && !dtn.includes(t.tab) ? ca(e, "/generator/image") : null
+        }) => t.tab && !dtn.includes(t.tab) ? ca(e, "//pixai") : null
     }, {
         handle: {
             name: "generator/realtime",
@@ -115475,13 +115475,13 @@ const ile = [{
         lazy: () => nt(() => import("./UpscalePage-8e_RQXwy.js"), __vite__mapDeps([189, 83, 49, 50, 51, 27, 28, 29, 30, 31, 32, 33, 21, 34, 35, 12, 36, 22, 37, 38, 14, 2, 15, 16, 39, 23, 10, 40, 17, 41, 6, 42, 52, 53, 54, 60, 61, 84, 68, 174]), import.meta.url)
     }, {
         handle: {
-            name: "generator/image-stitching"
+            name: "/pixai-stitching"
         },
-        path: "generator/image-stitching",
+        path: "/pixai-stitching",
         loader: ({
             request: e
         }) => (Fe("legacy_route", {
-            pathname: "/generator/image-stitching"
+            pathname: "//pixai-stitching"
         }), ca(e, "/generator/stitching/kiss"))
     }, {
         handle: {
@@ -115559,7 +115559,7 @@ const ile = [{
             request: e
         }) => (Fe("legacy_route", {
             pathname: "/submit/gen"
-        }), ca(e, "/generator/image", {
+        }), ca(e, "//pixai", {
             mode: "gen"
         }))
     }, {
@@ -115571,7 +115571,7 @@ const ile = [{
             request: e
         }) => (Fe("legacy_route", {
             pathname: "/submit/fill"
-        }), ca(e, "/generator/image", {
+        }), ca(e, "//pixai", {
             mode: "fill"
         }))
     }, {
