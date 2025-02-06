@@ -27227,13 +27227,13 @@ const lX = e => {
         const e = Hm();
         return {
             get isProd() {
-                return e.includes("api.pixai.art")
+                return e.includes("api.voids.top")
             },
             get isTest() {
                 return e.includes("ring.mewtant.co") && e.includes("papi")
             },
             get isStaging() {
-                return e.includes("pixai.art") && e.includes("pai-api")
+                return e.includes("voids.top") && e.includes("pai-api")
             },
             get isLocal() {
                 return !this.isProd && !this.isTest && !this.isStaging
@@ -67120,7 +67120,7 @@ function cGe() {
     };
     return g.jsx(yee, {
         freeSolo: !0,
-        options: Vb(ES(["https://api.pixai.art", "https://papi-main.ring.mewtant.co", "http://127.0.0.1:3011", "http://dev.local:3011", Bt.apiUrl, ...r])),
+        options: Vb(ES(["https://api.voids.top", "https://papi-main.ring.mewtant.co", "http://127.0.0.1:3011", "http://dev.local:3011", Bt.apiUrl, ...r])),
         className: "flex-1",
         size: "small",
         renderInput: a => g.jsx(_ee, {
