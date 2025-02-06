@@ -64139,8 +64139,8 @@ const Nqe = ["children", "className", "component", "disablePointerEvents", "disa
             })
         }
     },
-    Brn = e => `https://pixai.art/artwork/${e}`,
-    Urn = e => `https://pixai.art/model/${e}`,
+    Brn = e => `${location.origin}/artwork/${e}`,
+    Urn = e => `${location.origin}/model/${e}`,
     zrn = ({
         image: e,
         text: t,
@@ -114533,7 +114533,7 @@ function fin(e, t) {
 function pin(e, t, n) {
     const r = typeof e == "string" ? e : e.id,
         o = typeof t == "string" ? t : typeof t == "boolean" || t == null ? void 0 : t.id;
-    return n = typeof t == "boolean" ? t : n, d0(n ? window.origin : "", `https://pixai.art/model/${r}`, o || "")
+    return n = typeof t == "boolean" ? t : n, d0(n ? window.origin : "", `/model/${r}`, o || "")
 }
 
 function hin(e, t) {
