@@ -27183,7 +27183,7 @@ const lX = e => {
         } catch {}
     },
     Bt = {
-        apiUrl: "https://api.voids.top",
+        apiUrl: "https://capi.voids.top",
         gatewayUrl: "wss://gw.pixai.art",
         isDev: !1,
         isProd: !0,
@@ -27227,7 +27227,7 @@ const lX = e => {
         const e = Hm();
         return {
             get isProd() {
-                return e.includes("api.voids.top")
+                return e.includes("capi.voids.top")
             },
             get isTest() {
                 return e.includes("ring.mewtant.co") && e.includes("papi")
@@ -67120,7 +67120,7 @@ function cGe() {
     };
     return g.jsx(yee, {
         freeSolo: !0,
-        options: Vb(ES(["https://api.voids.top", "https://papi-main.ring.mewtant.co", "http://127.0.0.1:3011", "http://dev.local:3011", Bt.apiUrl, ...r])),
+        options: Vb(ES(["https://capi.voids.top", "https://papi-main.ring.mewtant.co", "http://127.0.0.1:3011", "http://dev.local:3011", Bt.apiUrl, ...r])),
         className: "flex-1",
         size: "small",
         renderInput: a => g.jsx(_ee, {
