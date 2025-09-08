@@ -3,7 +3,7 @@ import glob
 for file in glob.glob("assets/*.js"):
     src = open(file, "r", encoding="utf-8").read()
     original = src
-    src = src.replace('"/generator/image"', '"/pixai"')
+    src = src.replace('"/generator/image"', '"//pixai"')
     if src != original:
         original = src
         print("[1] patched", file)
@@ -15,4 +15,12 @@ for file in glob.glob("assets/*.js"):
     if src != original:
         original = src
         print("[3] patched", file)
+    if 'title:"common:home.label"' in src:
+        index1 = src.index('title:"common:home.label"')
+        index2 = src[index1:].index('link:')
+        if src[index1+index2:index1+index2+8] == 'link:"/"':
+            src = src[:index1+index2] + 'link:"/pixai"'+ src[index1+index2+8:]
+    if src != original:
+        original = src
+        print("[4] patched", file)
     open(file, "w", encoding="utf-8").write(src)
