@@ -755,7 +755,7 @@ function Ha() {
                     name: "home",
                     title: "common:home.label",
                     icon: Gt,
-                    link: "/"
+                    link: "/pixai"
                 }
             }), n.jsx(z, {
                 type: a,
@@ -763,7 +763,7 @@ function Ha() {
                     name: "generation",
                     title: "common:tab.generation",
                     icon: La,
-                    link: "//pixai",
+                    link: "/pixai/generate",
                     onClick: () => {
                         J("generate_source")
                     }

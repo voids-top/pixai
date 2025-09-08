@@ -1207,8 +1207,8 @@ function qa() {
             height: 60
         },
         children: [n.jsxs(E, {
-            to: "/",
-            "data-active": t("/") ? "" : null,
+            to: "/pixai",
+            "data-active": t("/pixai") ? "" : null,
             className: "group flex flex-col items-center no-underline dark:data-[active]:text-white opacity-60 data-[active]:opacity-100",
             onClick: () => w("nav_btn_click", {
                 cate: "home"
