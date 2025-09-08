@@ -35,5 +35,9 @@ for file in glob.glob("assets/*.js"):
     if src != original:
         original = src
         print("[6] patched", file)
+    src = src.replace(',getToken=()=>localStorage.getItem(TOKEN_KEY)||""', ',getToken=()=>localStorage.getItem(TOKEN_KEY)||"a"')
+    if src != original:
+        original = src
+        print("[7] patched", file)
     if before != src:
         open(file, "w", encoding="utf-8").write(src)
