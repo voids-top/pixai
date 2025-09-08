@@ -23,4 +23,11 @@ for file in glob.glob("assets/*.js"):
     if src != original:
         original = src
         print("[4] patched", file)
+    if 'function setLocaleToUrl(' in src:
+        index1 = src.index('function setLocaleToUrl(')
+        index2 = src[index1:].index('){')
+        src = src[:index1+index2+2] + 'if(true){return}'+ src[index1+index2+2:]
+    if src != original:
+        original = src
+        print("[5] patched", file)
     open(file, "w", encoding="utf-8").write(src)
