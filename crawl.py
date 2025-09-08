@@ -2,7 +2,6 @@ import requests
 import re
 
 html = requests.get("https://pixai.art").text
-open("index.html", "w", encoding="utf-8").write(html)
 
 base_url = re.search(r"https://cdn.pixai.art/artifacts/[a-zA-Z0-9\-_\.]+/assets", html).group(0)
 cdn_regex = r"https://cdn.pixai.art/artifacts/[a-zA-Z0-9\-_/\.]+"
@@ -10,6 +9,7 @@ module_regex = r"from\"./[a-zA-Z0-9\-_/\.]+\.js\";"
 urls = set()
 done = set()
 
+open("index.html", "w", encoding="utf-8").write(html.replace(base_url, "/pixai/assets"))
 for match in re.findall(cdn_regex, html):
     urls.add(match)
 
