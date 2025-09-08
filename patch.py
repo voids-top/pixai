@@ -2,6 +2,7 @@ import glob
 
 for file in glob.glob("assets/*.js"):
     src = open(file, "r", encoding="utf-8").read()
+    before = src
     original = src
     src = src.replace('"/generator/image"', '"//pixai"')
     if src != original:
@@ -30,4 +31,5 @@ for file in glob.glob("assets/*.js"):
     if src != original:
         original = src
         print("[5] patched", file)
-    open(file, "w", encoding="utf-8").write(src)
+    if before != src:
+        open(file, "w", encoding="utf-8").write(src)

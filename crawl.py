@@ -20,9 +20,9 @@ while True:
     print(url)
     if url in done:
         continue
-    src = requests.get(url).text
-    open("assets/" + url.split("/")[-1], "w", encoding="utf-8").write(src)
+    src = requests.get(url).content
+    open("assets/" + url.split("/")[-1], "wb").write(src)
     #print(src[0:100])
-    for module in re.findall(module_regex, src):
+    for module in re.findall(module_regex, src.decode("utf-8")):
         module = base_url + module.replace("from\".", "").replace("\";", "")
         urls.add(module)
