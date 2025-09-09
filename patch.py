@@ -39,13 +39,8 @@ for file in glob.glob("assets/*.js"):
     if src != original:
         original = src
         print("[8] patched", file)
-    if 'function CreditPackDiscountCountdownBannerForNewUser(' in src:
-        index1 = src.index('function CreditPackDiscountCountdownBannerForNewUser(')
-        index2 = src[index1:].index('){')
-        src = src[:index1+index2+2] + 'if(true){return}'+ src[index1+index2+2:]
-    if src != original:
-        original = src
-        print("[9] patched", file)
+    #rn?.isFirstTime -> false
+
     #if 'title:"common:home.label"' in src:
     #    index1 = src.index('title:"common:home.label"')
     #    index2 = src[index1:].index('link:')
