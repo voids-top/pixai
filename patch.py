@@ -39,7 +39,10 @@ for file in glob.glob("assets/*.js"):
     if src != original:
         original = src
         print("[8] patched", file)
-    #rn?.isFirstTime -> false
+    src = src.replace('rn?.isFirstTime', 'false')
+    if src != original:
+        original = src
+        print("[9] patched", file)
 
     #if 'title:"common:home.label"' in src:
     #    index1 = src.index('title:"common:home.label"')
