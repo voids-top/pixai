@@ -4,6 +4,7 @@ for file in glob.glob("assets/*.js"):
     src = open(file, "r", encoding="utf-8").read()
     before = src
     original = src
+    """
     src = src.replace('"/generator/image"', '"/pixai"')
     if src != original:
         original = src
@@ -12,6 +13,7 @@ for file in glob.glob("assets/*.js"):
     if src != original:
         original = src
         print("[2] patched", file)
+    """
     src = src.replace("https://api.pixai.art", "https://capi.voids.top")
     if src != original:
         original = src
@@ -25,20 +27,24 @@ for file in glob.glob("assets/*.js"):
         original = src
         print("[5] patched", file)
     if 'function setLocaleToUrl(' in src:
+        if "if(true){return}"
         index1 = src.index('function setLocaleToUrl(')
         index2 = src[index1:].index('){')
         src = src[:index1+index2+2] + 'if(true){return}'+ src[index1+index2+2:]
     if src != original:
         original = src
         print("[6] patched", file)
-    src = src.replace(',getToken=()=>localStorage.getItem(TOKEN_KEY)||""', ',getToken=()=>localStorage.getItem(TOKEN_KEY)||"a"')
-    if src != original:
-        original = src
-        print("[7] patched", file)
+    if ":token" in src:
+        src = src.replace('||localStorage.getItem', '||"a"||localStorage.getItem')
+        if src != original:
+            original = src
+            print("[7] patched", file)
+    """
     src = src.replace('jsxRuntimeExports.jsxs(Link,{to:"/","data-active":it("/")?"":null', 'jsxRuntimeExports.jsxs(Link,{to:"/pixai","data-active":it("/pixai")?"":null')
     if src != original:
         original = src
         print("[8] patched", file)
+    """
     src = src.replace('rn?.isFirstTime', 'false')
     if src != original:
         original = src
