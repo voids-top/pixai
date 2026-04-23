@@ -91,7 +91,7 @@ Tsubaki.2 回報清晰的描述。
 ## 提示詞範例
 
 <PromptExamples>
-<PromptExample img="https://capi.voids.top/v1/media/680311620260133809/thumbnail">A delicate, high-detail anime close-up portrait in a soft pastel palette, framed tightly from the top of the head to the upper chest. **The composition is slightly off-center, emphasizing one large, glossy eye (cool gray-blue) with layered iris rings and bright catchlights.**</PromptExample>
-<PromptExample img="https://capi.voids.top/v1/media/680311620260133809/thumbnail">This is a low-angle, eye-level close-up, front-view composition with direct viewer eye contact, capturing the subject from mid-chest upward as she lies on her back on a rumpled bed. The framing emphasizes her exposed collarbone.</PromptExample>
-<PromptExample img="https://capi.voids.top/v1/media/680311620260133809/thumbnail">This is a digital illustration rendered in a modern anime style with clean lines, soft gradient shading, vivid colors, and glossy highlights. The image captures its subject in a low-angle, front-view medium shot.</PromptExample>
+<PromptExample img="https://api.pixai.art/v1/media/680311620260133809/thumbnail">A delicate, high-detail anime close-up portrait in a soft pastel palette, framed tightly from the top of the head to the upper chest. **The composition is slightly off-center, emphasizing one large, glossy eye (cool gray-blue) with layered iris rings and bright catchlights.**</PromptExample>
+<PromptExample img="https://api.pixai.art/v1/media/680311620260133809/thumbnail">This is a low-angle, eye-level close-up, front-view composition with direct viewer eye contact, capturing the subject from mid-chest upward as she lies on her back on a rumpled bed. The framing emphasizes her exposed collarbone.</PromptExample>
+<PromptExample img="https://api.pixai.art/v1/media/680311620260133809/thumbnail">This is a digital illustration rendered in a modern anime style with clean lines, soft gradient shading, vivid colors, and glossy highlights. The image captures its subject in a low-angle, front-view medium shot.</PromptExample>
 </PromptExamples>`},footer:{"help-center":"幫助中心"}},o={tsubaki2:r};export{o as default};

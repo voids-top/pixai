@@ -10,6 +10,7 @@ urls = set()
 done = set()
 
 open("index.html", "w", encoding="utf-8").write(html.replace(base_url, "/assets"))
+open("404.html", "w", encoding="utf-8").write(html.replace(base_url, "/assets"))
 for match in re.findall(cdn_regex, html):
     urls.add(match)
 
