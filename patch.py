@@ -38,6 +38,10 @@ for file in glob.glob("artifacts/*/assets/*.js"):
         if src != original:
             original = src
             print("[7] patched", file)
+    src = src.replace('l(localStorage["api-base-url"])', '""')
+    if src != original:
+        original = src
+        print("[8] patched", file)
     """
     src = src.replace('jsxRuntimeExports.jsxs(Link,{to:"/","data-active":it("/")?"":null', 'jsxRuntimeExports.jsxs(Link,{to:"/pixai","data-active":it("/pixai")?"":null')
     if src != original:

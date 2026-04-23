@@ -6,7 +6,7 @@ html = requests.get("https://pixai.art").text
 
 base_url = re.search(r"https://cdn.pixai.art/artifacts/[a-zA-Z0-9\-_\.]+/assets", html).group(0)
 cdn_regex = r"https://cdn.pixai.art/artifacts/[a-zA-Z0-9\-_/\.]+"
-module_regex = r"/[a-zA-Z0-9\-_\.]+\.js"
+module_regex = r"(/[a-zA-Z0-9\-_\.]+\.(js|css))"
 urls = set()
 done = set()
 
@@ -33,7 +33,7 @@ while True:
     open(filename, "wb").write(src.replace(b"cdn.pixai.art", b"pixai.voids.top"))
     #print(src[0:100])
     for module in re.findall(module_regex, src.decode("utf-8")):
-        module = base_url + module
+        module = base_url + module[0]
         if not module in done:
             urls.add(module)
     done.add(url)
