@@ -1,5 +1,6 @@
 import requests
 import re
+import os
 
 html = requests.get("https://pixai.art").text
 
@@ -9,8 +10,8 @@ module_regex = r"/[a-zA-Z0-9\-_\.]+\.js"
 urls = set()
 done = set()
 
-open("index.html", "w", encoding="utf-8").write(html.replace(base_url, "/assets"))
-open("404.html", "w", encoding="utf-8").write(html.replace(base_url, "/assets"))
+open("index.html", "w", encoding="utf-8").write(html.replace("cdn.pixai.art", "pixai.voids.top"))
+open("404.html", "w", encoding="utf-8").write(html.replace("cdn.pixai.art", "pixai.voids.top"))
 for match in re.findall(cdn_regex, html):
     urls.add(match)
 
@@ -25,7 +26,11 @@ while True:
     if r.status_code != 200:
         continue
     src = r.content
-    open("assets/" + url.split("/")[-1], "wb").write(src)
+    filename = url.replace("https://cdn.pixai.art/", "")
+    folder = "/".join(filename.split("/")[:-1])
+    #print(folder, filename)
+    os.makedirs(folder, exist_ok=True)
+    open(filename, "wb").write(src.replace(b"cdn.pixai.art", b"pixai.voids.top"))
     #print(src[0:100])
     for module in re.findall(module_regex, src.decode("utf-8")):
         module = base_url + module
